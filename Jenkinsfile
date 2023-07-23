@@ -16,6 +16,11 @@ pipeline {
 			steps {
              
 			    sh "./mvnw jacoco:report@jacoco-report"
+			    publishHTML (target: [ 
+			    	reportDir: 'target/site/jacoco',
+			    	reportFiles: 'index.html',
+			    	reportName: "Jacoco Report"
+			     ])
 			    sh "./mvnw jacoco:check@jacoco-check"
              
 			}
