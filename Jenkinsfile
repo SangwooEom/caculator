@@ -17,9 +17,9 @@ pipeline {
              
 			    sh "./mvnw jacoco:report@jacoco-report"
 			    publishHTML([
-			    	allowMissing: false, 
-			    	alwaysLinkToLastBuild: false, 
-			    	keepAll: false, 
+			    	allowMissing: true, 
+			    	alwaysLinkToLastBuild: true, 
+			    	keepAll: true, 
 			    	reportDir: 'target/site/jacoco', 
 			    	reportFiles: 'index.html', 
 			    	reportName: 'JaCoCo Report', 
