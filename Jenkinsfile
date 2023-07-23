@@ -19,7 +19,7 @@ pipeline {
 			    publishHTML([
 			    	allowMissing: true, 
 			    	alwaysLinkToLastBuild: true, 
-			    	keepAll: true, 
+			    	keepAll: false, 
 			    	reportDir: 'target/site/jacoco', 
 			    	reportFiles: 'index.html', 
 			    	reportName: 'JaCoCo Report', 
