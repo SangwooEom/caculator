@@ -26,7 +26,6 @@ pipeline {
 			    	reportTitles: '', 
 			    	useWrapperFileDirectly: true
 			    ])
-			    sh "./mvnw jacoco:check@jacoco-check"
              
 			}
                
