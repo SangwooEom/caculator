@@ -12,5 +12,14 @@ pipeline {
 				sh "./mvnw test"
 			}
 		}
+		stage("Code coverage") {
+			steps {
+             
+			    sh "./mvnw jacoco:report@jacoco-report"
+			    sh "./mvnw jacoco:check@jacoco-check"
+             
+			}
+               
+		}
 	}
 }
